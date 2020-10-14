@@ -6,9 +6,11 @@ const DEFAULT_ENCODING: HexBase64Latin1Encoding = 'base64'
 
 export type { PKCEHelper, PKCEChallenge } from 'abstract-pkce'
 
+export type PKCEHelperNode = PKCEHelper<string>
+
 export const createPKCEHelper: (
   algorithm?: string, encoding?: HexBase64Latin1Encoding, isHMAC?: boolean,
-) => PKCEHelper<string> = (
+) => PKCEHelperNode = (
   algorithm = DEFAULT_ALGORITHM, encoding = DEFAULT_ENCODING, isHMAC = true,
 ) => originalCreatePKCEHelper<string>(
   isHMAC

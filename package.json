@@ -1,10 +1,10 @@
 {
   "name": "simple-pkce",
-  "version": "1.0.3",
-  "description": "PKCE HMAC SHA256 (Amazon compatible) challenge & verifier generator for node",
+  "version": "1.0.4",
+  "description": "PKCE challenge & verifier generator for node, any algorithm and digest supported",
   "main": "dist/index.js",
   "scripts": {
-    "build": "rm -rf dist && tsc && cp dist/index.* ./",
+    "build": "rm -rf dist && tsc && cp dist/index.d.ts ./",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

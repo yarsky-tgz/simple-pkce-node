@@ -18,7 +18,7 @@ export const createPKCEHelper: (
       .createHmac(algorithm, verifier)
       .digest(encoding)
     : (verifier: string) => crypto
-      .createHash(DEFAULT_ALGORITHM)
+      .createHash(algorithm)
       .update(verifier)
       .digest(encoding),
   buildVerifier(length: number, possibleCharsCount: number, getPossibleChar: (position: number) => string): string {
